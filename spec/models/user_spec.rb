@@ -8,4 +8,8 @@ describe User do
   it "should not be saved with invalid attributes" do
     expect { FactoryGirl.create(:user, uid: '') }.to raise_error
   end
+
+  it 'should have books' do
+    FactoryGirl.create(:user_with_books).should be_valid
+  end
 end

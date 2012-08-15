@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
-  attr_accessible :name, :provider, :uid
+  attr_accessible :name, :provider
   validates :uid, presence: true
+
+  has_many :books
 
   def self.create_with_omniauth(auth)
     create! do |user|
