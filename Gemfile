@@ -33,7 +33,7 @@ group :development, :test do
   gem 'factory_girl_rails'
 end
 
-gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails', github: 'anjlab/bootstrap-rails'
+gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails', git: 'git://github.com/anjlab/bootstrap-rails.git'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
