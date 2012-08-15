@@ -2,5 +2,10 @@
   %h1 
     Users
     %small All users accounts
-- @Users.each do |user|
-  user.name
+%table.table.table-striped
+  %tr
+    %th Users
+  - @Users.each do |user|
+    %tr
+      %td
+        = user.name
