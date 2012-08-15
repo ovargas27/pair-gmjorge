@@ -5,7 +5,10 @@
 %table.table.table-striped
   %tr
     %th Users
+    %th
   - @Users.each do |user|
     %tr
       %td
         = user.name
+      %td
+        = link_to 'Show', user_books_path(user), class: 'btn'
