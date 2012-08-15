@@ -1,10 +1,14 @@
-%h1 Listing books
+.page-header
+  %h1 
+    Listing books
+    %small A list of all books
 
 %table.table.table-striped
   %tr
     %th Title
     %th ISBN
     %th Author
+    %th Status
     %th
   - @books.each do |book|
     %tr
@@ -14,6 +18,8 @@
         = book.ISBN
       %td
         = book.author
+      %td
+        = book.status
       %td
         .btn-group
           = link_to 'Show', book, class: 'btn'

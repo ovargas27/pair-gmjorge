@@ -1,3 +1,9 @@
+.page-header
+  %h1
+    = @book.title
+    %small
+      = @book.author
+
 %p#notice
   = notice
 %p
@@ -9,5 +15,9 @@
 %p
   %b Author:
   = @book.author
+%p
+  %b Status:
+  = @book.status
 = link_to 'Edit', edit_book_path(@book)
+= link_to 'Take book', '/'
 = link_to 'Back', books_path
