@@ -5,8 +5,12 @@ PairGmjorge::Application.routes.draw do
 
   resources :books
 
-  resources :user do
-    resources :book, only: [:index]
+  #resources :user do
+    #resources :book, only: [:index]
+  #end
+
+  resources :users do
+    resources :books
   end
 
   match "/auth/:provider/callback" => "sessions#create"
