@@ -27,7 +27,15 @@
               <li><a href="/users">Users</a></li>
             </ul>
             <ul class="nav pull-right">
-              <li><a href="/auth/google_oauth2">Login</a></li>
+              <li class="divider-vertical"></li>
+              <% if current_user %>
+                Welcome <%= current_user.name %>!
+                <li><%= link_to "Sign Out", signout_path %></li>
+              <% else %>
+                <li>
+                  <%= link_to "Sign in with Google", "/auth/google_oauth2" %>
+                </li>
+              <% end %>
             </ul>
           </div>
         </div>
