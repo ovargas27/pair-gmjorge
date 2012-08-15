@@ -1,8 +1,12 @@
 PairGmjorge::Application.routes.draw do
+  get "home/index"
+
+  get "users/index"
+
   resources :books
 
   resources :user do
-    resource :books, :only => :index
+    resources :book, only: [:index]
   end
 
   match "/auth/:provider/callback" => "sessions#create"
@@ -58,7 +62,7 @@ PairGmjorge::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
-  root to: 'books#index'
+  root to: 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
