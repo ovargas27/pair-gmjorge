@@ -23,7 +23,7 @@ end
 
 gem 'jquery-rails'
 
-gem 'omniauth-google'
+gem 'omniauth-google-oauth2'
 
 group :development, :test do
   gem 'rspec-rails'
