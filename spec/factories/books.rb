@@ -3,7 +3,8 @@
 FactoryGirl.define do
   factory :book do
     title 'UNIX Programacion avanzada'
-    author 'Deitel & Deitel'
+    author 'Francisco M. Marquez'
     numero_libro '9701510496'
+    status 'available'
   end
 end
