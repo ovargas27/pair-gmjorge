@@ -18,6 +18,7 @@
 %p
   %b Status:
   = @book.status
-= link_to 'Edit', edit_book_path(@book)
-= link_to 'Take book', '/'
-= link_to 'Back', books_path
+.btn-group
+  = link_to 'Take book', loan_take_path(@book), class: 'btn'
+  = link_to 'Edit', edit_book_path(@book), class: 'btn'
+  = link_to 'Back', books_path, class: 'btn'
