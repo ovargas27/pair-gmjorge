@@ -20,6 +20,7 @@ Feature: User taking a book from library
 
   Scenario: A user return a book
     Given that a user is loggin correctly
+    And have borrow books
     And visit books index view
     When take an unavailable book
     Then appear an error message

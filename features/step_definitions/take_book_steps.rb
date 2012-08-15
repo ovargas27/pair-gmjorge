@@ -11,6 +11,7 @@ end
 
 When /^take an available book$/ do
   @book.status.should == 'available'
+  click_link 'Take book'
 end
 
 Then /^the book change his status tu unavailable$/ do
@@ -31,6 +32,7 @@ end
 
 When /^have borrow books$/ do
   @user_with_books = FactoryGirl.create(:user_with_books)
+  visit users_index_path
 end
 
 When /^visite the borrowed books$/ do
