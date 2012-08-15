@@ -1,0 +1,14 @@
+.page-header
+  %h1 
+    Users
+    %small All users accounts
+%table.table.table-striped
+  %tr
+    %th Users
+    %th
+  - @Users.each do |user|
+    %tr
+      %td
+        = user.name
+      %td
+        = link_to 'Show', user_books_path(user), class: 'btn'
