@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
   end
 
   def error
-    redirect_to root_url, :notice => 'Something was wrong! Try again'
+    message = params[:message] == 'invalid_credentials' ? "Invalid Credentials" : 'Unkown error'
+    redirect_to root_url, notice: message
   end
 end
